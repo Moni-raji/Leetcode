@@ -1,6 +1,6 @@
 class Solution {
     public boolean detectCapitalUse(String word) {
-        if(word.matches("[A-Z]+") || word.matches("[a-z]+") || word.matches("[A-Z][a-z]*")){
+        if(word.matches("[A-Z]+") || word.matches("[a-z]+") || word.matches("[A-Z][a-z]+")){
             return true;
         }
         return false;
