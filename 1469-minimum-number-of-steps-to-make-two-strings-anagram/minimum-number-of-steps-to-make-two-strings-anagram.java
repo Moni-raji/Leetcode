@@ -7,8 +7,7 @@ class Solution {
         }
         int sum=0;
         for(int a:freq){
-            if(a>0) sum+=a;
-            else if(a<0) sum+=(a*-1);
+            sum+=Math.abs(a);
         }
         return sum/2;
     }
