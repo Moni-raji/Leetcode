@@ -11,9 +11,10 @@ class Solution {
                 if(Math.abs(target-sum)<Math.abs(target-s)){
                     s=sum;
                 }
-                if(sum<target) j++;
-                else if(sum>target) k--;
-                else return sum; 
+                if(sum==target) return sum;
+                else if(sum<target) j++;
+                else k--;
+                 
             }
         }
         return s;
