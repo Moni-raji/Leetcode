@@ -10,9 +10,7 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             int a=target-nums[i];
             if(map.containsKey(a)) return new int[]{map.get(a),i};
-            else{
-                map.put(nums[i],i);
-            }
+            map.put(nums[i],i);
         }
         return new int[]{};
     }
