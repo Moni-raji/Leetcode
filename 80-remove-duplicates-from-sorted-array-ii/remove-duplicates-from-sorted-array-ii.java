@@ -6,7 +6,6 @@ class Solution {
         for(int i=1;i<nums.length;i++){
             if(nums[i]==a){
                 count++;
-                //if(count<3) k++;
             }
             else{
                 a=nums[i];
