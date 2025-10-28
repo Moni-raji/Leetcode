@@ -6,11 +6,11 @@ class Solution {
         for(char c:s.toCharArray()){
             if(c=='|' && count==0) count++;
             else if(count>0 && c=='|') count--;
-            else if(count==0) sb.append(c);
+            else if(count==0 && c=='*') ast++;
         }
-        for(char c:sb.toString().toCharArray()){
+        /*for(char c:sb.toString().toCharArray()){
             if(c=='*') ast++;
-        }
+        }*/
         return ast;
     }
 }
