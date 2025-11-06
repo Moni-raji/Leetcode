@@ -7,12 +7,11 @@ class Solution {
         while(i<nums.length){
             if(nums[i]==a){
                 i++;
-                a++;
             }
             else{
                 al.add(a);
-                a++;
             }
+            a++;
         }
         return al;
     }
