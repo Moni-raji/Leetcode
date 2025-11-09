@@ -1,0 +1,18 @@
+class Solution {
+    public int[] nextGreaterElements(int[] nums) {
+        int n=nums.length;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=-1;
+            for(int j=i+1;j<i+n;j++){
+                int k=j%n;
+                if(nums[k]>nums[i]){
+                    arr[i]=nums[k];
+                    break;
+                }
+            }
+            
+        }
+        return arr;
+    }
+}
