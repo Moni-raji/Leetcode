@@ -3,9 +3,7 @@ class Solution {
         Map<Integer,Integer> map=new HashMap<>();
         Stack<Integer> stack=new Stack<>();
         for(int i=nums2.length-1;i>=0;i--){
-            while(!stack.isEmpty() && stack.peek()<=nums2[i]){
-                stack.pop();
-            }
+            while(!stack.isEmpty() && stack.peek()<=nums2[i]) stack.pop();
             int next=stack.isEmpty()?-1:stack.peek();
             map.put(nums2[i],next);
             stack.push(nums2[i]);
