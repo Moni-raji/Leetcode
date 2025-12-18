@@ -3,9 +3,9 @@ class Solution {
         String arr[]={".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
         Set<String> set=new HashSet<>();
         for(String s:words){
-            String r="";
-            for(char c:s.toCharArray()) r=r+arr[c-'a'];
-            set.add(r);
+            StringBuilder sb=new StringBuilder();
+            for(char c:s.toCharArray()) sb.append(arr[c-'a']);
+            set.add(sb.toString());
         }
         return set.size();
     }
