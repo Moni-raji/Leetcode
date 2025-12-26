@@ -3,7 +3,8 @@ class Solution {
         int sum=0;
         for(int i=0;i<nums.size();i++){
             String s=Integer.toBinaryString(i);
-            if(count(s)==k) sum+=nums.get(i);
+            //if(count(s)==k) sum+=nums.get(i);
+            if(Integer.bitCount(i)==k) sum+=nums.get(i);
         }
         return sum;
     }
