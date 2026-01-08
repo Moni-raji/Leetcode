@@ -5,12 +5,13 @@ class Solution {
             if(num.charAt(i) == '0') i--;
             else break;
         }
-        int j=0;
+        /*int j=0;
         StringBuilder sb=new StringBuilder();
         while(j<=i){
             sb.append(num.charAt(j));
             j++;
         }
-        return sb.toString();
+        return sb.toString();*/
+        return num.substring(0,i+1);
     }
 }
