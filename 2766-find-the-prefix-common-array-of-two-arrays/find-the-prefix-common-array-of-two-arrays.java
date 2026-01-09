@@ -7,25 +7,20 @@ class Solution {
         for(int i=0;i<A.length;i++){
             if(A[i]==B[i]){
                 count++;
-                r[i]=count;
-                /*s1.add(A[i]);
-                s2.add(B[i]);*/
+                //r[i]=count;
             }
             else if(!s2.contains(A[i]) && !s1.contains(B[i])){
-                /*s1.add(A[i]);
-                s2.add(B[i]);*/
-                r[i]=count;
+                //r[i]=count;
             }
             else if(s2.contains(A[i]) && s1.contains(B[i])){
                 count+=2;
-                r[i]=count;
-                /*s1.add(A[i]);
-                s2.add(B[i]);*/
+                //r[i]=count;
             }
             else if(s2.contains(A[i]) || s1.contains(B[i])){
                 count++;
-                r[i]=count;
+                //r[i]=count;
             }
+            r[i]=count;
             s1.add(A[i]);
             s2.add(B[i]);
             
