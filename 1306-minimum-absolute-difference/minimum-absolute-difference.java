@@ -8,7 +8,7 @@ class Solution {
         }
         List<List<Integer>> al=new ArrayList<>();
         for(int i=0;i<arr.length-1;i++){
-            if(Math.abs(arr[i]-arr[i+1]) == min) {
+            if((arr[i+1]-arr[i]) == min) {
             al.add(Arrays.asList(arr[i],arr[i+1]));
             }
         }
