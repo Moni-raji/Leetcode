@@ -2,16 +2,20 @@ class Solution {
     public int countPrimeSetBits(int left, int right) {
         int count=0;
         for(int i=left;i<=right;i++){
-            int a=0;
+            /*int a=0;
             int num=i;
             while(num!=0){
                 if(num%2==1) a++;
                 num/=2;
             }
-            if(isprime(a)) count++;
+            if(isprime(a)) count++;*/
+
+            int b=Integer.bitCount(i);
+            if(isprime(b)) count++;
         }
         return count;
     }
+    
     public static boolean isprime(int n){
         if(n<=1) return false;
         if(n==2) return true;
