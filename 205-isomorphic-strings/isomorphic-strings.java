@@ -1,21 +1,22 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        Map<Character,Character> map1=new HashMap<>();
-        Map<Character,Character> map2=new HashMap<>();
+        if(s.length() != t.length()) return false;
+        Map<Character,Character> m1=new HashMap<>();
+        Map<Character,Character> m2=new HashMap<>();
         for(int i=0;i<s.length();i++){
-            char c1=s.charAt(i);
-            char c2=t.charAt(i);
-            if(map1.containsKey(c1)){
-                if(map1.get(c1)!=c2) return false;
+            char a=s.charAt(i);
+            char b=t.charAt(i);
+            if(m1.containsKey(a)){
+                if(m1.get(a) != b) return false;
             }
             else{
-                map1.put(c1,c2);
+                m1.put(a,b);
             }
-            if(map2.containsKey(c2)){
-                if(map2.get(c2)!=c1) return false;
+            if(m2.containsKey(b)){
+                if(m2.get(b) != a) return false;
             }
             else{
-                map2.put(c2,c1);
+                m2.put(b,a);
             }
         }
         return true;
