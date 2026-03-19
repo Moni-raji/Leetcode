@@ -1,20 +1,21 @@
 class Solution {
     public int maxFreqSum(String s) {
-
         int freq[]=new int[26];
         for(char c:s.toCharArray()){
-            if(!Character.isLetter(c)) return 0;
+            if(!Character.isLetter(c)){
+                return 0;
+            }
             freq[c-'a']++;
         }
-        int vm=0;
-        int cm=0;
+        int v=0;
+        int cl=0;
         for(char c:s.toCharArray()){
-            if(isvowel(c) && freq[c-'a']>vm) vm=freq[c-'a'];
-            else if(!isvowel(c) && freq[c-'a']>cm) cm=freq[c-'a'];
+            if(isVowel(c) && freq[c-'a']>v) v=freq[c-'a'];
+            else if(!isVowel(c) && freq[c-'a']>cl) cl=freq[c-'a'];
         }
-        return vm+cm;
+        return v+cl;
     }
-    public boolean isvowel(char c){
+    public boolean isVowel(char c){
         return c=='a' || c=='e' || c=='i' || c=='o' || c=='u';
     }
 }
