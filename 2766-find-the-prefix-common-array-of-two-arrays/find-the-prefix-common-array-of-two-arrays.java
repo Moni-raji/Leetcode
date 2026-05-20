@@ -8,8 +8,7 @@ class Solution {
             if(A[i]==B[i]){
                 count++;
             }
-            else if(!s2.contains(A[i]) && !s1.contains(B[i])){
-                
+            else if(!s2.contains(A[i]) && !s1.contains(B[i])){   
             }
             else if(s2.contains(A[i]) && s1.contains(B[i])){
                 count+=2;
@@ -20,9 +19,7 @@ class Solution {
             r[i]=count;
             s1.add(A[i]);
             s2.add(B[i]);
-            
         }
-        return r;
-        
+        return r; 
     }
 }
