@@ -8,8 +8,8 @@ class Solution {
             if(A[i]==B[i]){
                 count++;
             }
-            else if(!s2.contains(A[i]) && !s1.contains(B[i])){   
-            }
+            /*else if(!s2.contains(A[i]) && !s1.contains(B[i])){   
+            }*/
             else if(s2.contains(A[i]) && s1.contains(B[i])){
                 count+=2;
             }
