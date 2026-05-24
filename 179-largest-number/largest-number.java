@@ -7,10 +7,13 @@ class Solution {
         }
         Arrays.sort(arr,(a,b)->(b+a).compareTo(a+b));
         if(arr[0].equals("0")) return "0";
-        StringBuilder sb=new StringBuilder();
+        //StringBuilder sb=new StringBuilder();
+        String r="";
         for(String a:arr){
-            sb.append(a);
+            //sb.append(a);
+            r+=a;
         }
-        return sb.toString();
+        //return sb.toString();
+        return r;
     }
 }
