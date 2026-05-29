@@ -1,6 +1,7 @@
 class Solution {
     public int candy(int[] ratings) {
         int n=ratings.length;
+        if(n==1) return 1;
         int arr[]=new int[n];
         Arrays.fill(arr,1);
         for(int i=1;i<n;i++){
