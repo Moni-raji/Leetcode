@@ -5,23 +5,20 @@ class Solution {
         int j=0;
         for(int i=0;i<n;i++){
             if(nums[i]<pivot){
-                arr[j]=nums[i];
+                arr[j++]=nums[i];
                 nums[i]=Integer.MIN_VALUE;
-                j++;
             }
         }
         for(int i=0;i<n;i++){
             if(nums[i]==pivot){
-                arr[j]=nums[i];
+                arr[j++]=nums[i];
                 nums[i]=Integer.MIN_VALUE;
-                j++;
             }
         }
         for(int i=0;i<n;i++){
             if(nums[i]>pivot){
-                arr[j]=nums[i];
+                arr[j++]=nums[i];
                 nums[i]=Integer.MIN_VALUE;
-                j++;
             }
         }
         return arr;
