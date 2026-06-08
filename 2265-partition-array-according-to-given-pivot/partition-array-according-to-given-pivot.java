@@ -6,19 +6,19 @@ class Solution {
         for(int i=0;i<n;i++){
             if(nums[i]<pivot){
                 arr[j++]=nums[i];
-                nums[i]=Integer.MIN_VALUE;
+                //nums[i]=Integer.MIN_VALUE;
             }
         }
         for(int i=0;i<n;i++){
             if(nums[i]==pivot){
                 arr[j++]=nums[i];
-                nums[i]=Integer.MIN_VALUE;
+                //nums[i]=Integer.MIN_VALUE;
             }
         }
         for(int i=0;i<n;i++){
             if(nums[i]>pivot){
                 arr[j++]=nums[i];
-                nums[i]=Integer.MIN_VALUE;
+                //nums[i]=Integer.MIN_VALUE;
             }
         }
         return arr;
