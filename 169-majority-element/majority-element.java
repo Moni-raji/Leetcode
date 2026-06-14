@@ -4,7 +4,8 @@ class Solution {
         int count=1;
         for(int i=1;i<nums.length;i++){
             if(count==0) a=nums[i];
-            count+=(nums[i]==a)?1:-1;
+            if(nums[i]==a) count++;
+            else count--;
         }
         return a;
     }
