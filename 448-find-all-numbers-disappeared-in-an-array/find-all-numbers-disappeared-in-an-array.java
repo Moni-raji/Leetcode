@@ -9,6 +9,7 @@ class Solution {
             if(!set.contains(i)) al.add(i);
         }*/
 
+        //refer code note
         for(int i=0;i<nums.length;i++){
             int j=Math.abs(nums[i])-1;
             if(nums[j]>0){
