@@ -8,11 +8,15 @@ class Solution {
                 if(arr[i][j]==0) continue;
                 boolean f=true;
                 for(int k=0;k<c;k++){
-                    if(arr[i][k]==1 && k!=j) f=false;
+                    if(arr[i][k]==1 && k!=j){
+                        f=false;
+                    }
                 }
                 if(!f) continue;
                 for(int k=0;k<r;k++){
-                    if(arr[k][j]==1 && k!=i) f=false;
+                    if(arr[k][j]==1 && k!=i){
+                        f=false;
+                    }
                 }
                 if(f) count++;
             }
