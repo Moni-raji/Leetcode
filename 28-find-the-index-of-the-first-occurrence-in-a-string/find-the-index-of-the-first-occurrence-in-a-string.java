@@ -3,18 +3,9 @@ class Solution {
        for(int i=0;i<=haystack.length()-needle.length();i++)
        {
         int j=0;
-        if(needle.isEmpty() )
-        {
-            return 0;
-        }
-        while(j<needle.length() && needle.charAt(j)==haystack.charAt(i+j))
-        {
-            j++;
-        }
-        if(j==needle.length())
-        {
-             return i;
-        }
+        if(needle.isEmpty()) return 0;
+        while(j<needle.length() && needle.charAt(j)==haystack.charAt(i+j)) j++;
+        if(j==needle.length()) return i;
        } 
        return -1;
     }
