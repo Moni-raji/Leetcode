@@ -12,7 +12,11 @@ class Solution {
                 sb.append(a);
             }
             String key=sb.toString();
-            map.putIfAbsent(key,new ArrayList<>());
+            /*map.putIfAbsent(key,new ArrayList<>());
+            map.get(key).add(s);*/
+            if(!map.containsKey(key)){
+                map.put(key,new ArrayList<>());
+            }
             map.get(key).add(s);
         }
         return new ArrayList<>(map.values());
