@@ -1,41 +1,17 @@
 class Solution {
     public int lengthOfLIS(int[] nums) {
-        /*int len=1;
-        List<Integer> al=new ArrayList<>();
-        al.add(nums[0]);
-        for(int i=1;i<nums.length;i++){
-            if(nums[i]>al.get(al.size()-1)){
-                al.add(nums[i]);
-                len++;
-            }
-            else{
-                int j=search(al,nums[i]);
-                al.set(j,nums[i]);
-            }
-        }
-        return len;*/
-        int n = nums.length;
-        int[] dp = new int[n];
+        int n=nums.length;
+        int dp[]=new int[n];
         Arrays.fill(dp,1);
-        int maxLength = 1;
-        for (int i = 1; i < n; i++) {
-            for (int j = 0; j < i; j++) {
-                if (nums[i] > nums[j]) {
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
+        int max=dp[0];
+        for(int i=1;i<n;i++){
+            for(int j=0;j<i;j++){
+                if(nums[i]>nums[j]){
+                    dp[i]=Math.max(dp[i],dp[j]+1);
                 }
             }
-            maxLength = Math.max(maxLength, dp[i]);
+            max=Math.max(max,dp[i]);
         }
-        return maxLength;
+        return max;
     }
-    /*public int search(List<Integer> al,int n){
-        int left=0;
-        int right=al.size()-1;
-        while(left<right){
-            int mid=left+(right-left)/2;
-            if(al.get(mid)>=n) right=mid;
-            else left=mid+1;
-        }
-        return left;
-    }*/
 }
