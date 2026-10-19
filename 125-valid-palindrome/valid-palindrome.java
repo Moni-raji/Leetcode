@@ -14,12 +14,11 @@ class Solution {
 
         int left=0;
         int right=s.length()-1;
-        //s=s.toLowerCase();
+        s=s.toLowerCase();
         while(left<=right){
             while(left<s.length() && !Character.isLetterOrDigit(s.charAt(left)) ) left++;
             while(right>=0 && !Character.isLetterOrDigit(s.charAt(right))) right--;
-            if(left<=right && 
-            Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) return false;
+            if(left<=right && s.charAt(left) != s.charAt(right)) return false;
             left++;
             right--;
         }
