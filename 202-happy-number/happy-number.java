@@ -1,6 +1,6 @@
 class Solution {
     public boolean isHappy(int n) {
-        /*Set<Integer> set=new HashSet<>();
+        Set<Integer> set=new HashSet<>();
         while(n!=1){
             if(set.contains(n)){
                 return false;
@@ -13,8 +13,8 @@ class Solution {
             }
             n=sum;
         }
-        return true;*/
-        Map<Integer,Integer> map=new HashMap<>();
+        return true;
+        /*Map<Integer,Integer> map=new HashMap<>();
         while(n!=1){
             if(map.containsKey(n)) return false;
             map.put(n,map.getOrDefault(n,0)+1);
@@ -25,6 +25,6 @@ class Solution {
             }
             n=sum;
         }
-        return true;
+        return true;*/
     }
 }
