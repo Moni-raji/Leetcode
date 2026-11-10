@@ -6,7 +6,7 @@ class Solution {
         Map<Integer,Integer> map=new HashMap<>();
         for(int a:nums){
             int diff=a-rev(a);
-            count = (count+map.getOrDefault(diff,0))%MOD;
+            count=(count+map.getOrDefault(diff,0))%MOD;
             map.put(diff,map.getOrDefault(diff,0)+1);
         } 
         return count;
