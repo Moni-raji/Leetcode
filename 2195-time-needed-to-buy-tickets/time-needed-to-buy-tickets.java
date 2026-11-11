@@ -2,6 +2,7 @@ class Solution {
     public int timeRequiredToBuy(int[] tickets, int k) {
         int steps=0;
         int n=tickets.length;
+        if(n==1) return tickets[0];
         int i=0;
         while(tickets[k]!=0){
             i=i%n;
