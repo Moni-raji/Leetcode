@@ -9,3 +9,9 @@ class Solution {
         return r;
     }
 }
+//the 2 elements can be replaced with a single element so that the low score diff is zero
+//Now we need to consider only the high score
+//there are 3 possiblities
+//change the 2 smallest element (or) change the smallest and lasrgest element (or) change the 2 largest element
+
+//find the min value obtained from the diff of the remaining elements
